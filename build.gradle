@@ -1,0 +1,17 @@
+apply plugin: 'java'
+
+allprojects {
+    repositories {
+        mavenCentral()
+  }
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.acme.Main'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+}
